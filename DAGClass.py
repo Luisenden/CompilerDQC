@@ -111,7 +111,7 @@ class DAGClass():
         # Draw the Directed Graph
         fig, ax = plt.subplots()
         nx.draw(self.DAG, pos, with_labels=True, node_color='lightblue', node_size=1500, ax=ax)
-        plt.show()
+        #plt.show()
         return
             
 
