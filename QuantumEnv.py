@@ -1,3 +1,4 @@
+from datetime import datetime
 import gym
 from gym import spaces
 from gym.utils import seeding
@@ -55,12 +56,12 @@ class EnvUpdater(gym.Env):      #gym is an opanAI's environment generator tools.
         self.successfulGames = 0
         
         self.epiTotalREward = 0
-        self.reward_filename = 'rewards.csv'
+        self.reward_filename = 'rewards{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
         with open(self.reward_filename, 'a', newline="") as file:
             writer = csv.writer(file)
             #writer.writerow(["Episode","Total"])
-        
-        self.done_filename = 'doneTime.csv'    
+
+        self.done_filename = 'doneTime{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
         with open(self.reward_filename, 'a', newline="") as file2:
             writer2 = csv.writer(file2)
             #writer.writerow(["Episode","Total"])

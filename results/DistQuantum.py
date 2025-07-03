@@ -1,3 +1,4 @@
+import datetime
 import os
 import sys
 from os.path import dirname, abspath
@@ -25,8 +26,8 @@ config = Config()
 
 config.seed = 123453
 config.num_episodes_to_run = 1#250   # control number of episodes was 60
-config.file_to_save_data_results = "results/data_and_graphs/dist_quantum_Results_Data.pkl"   #save results 
-config.file_to_save_results_graph = "results/data_and_graphs/dist_quantum__Results_Graph.png"   #save graph
+config.file_to_save_data_results = "results/data_and_graphs/dist_quantum_Results_Data{}.pkl".format(datetime.now().strftime("%Y%m%d_%H%M%S"))   #save results 
+config.file_to_save_results_graph = "results/data_and_graphs/dist_quantum__Results_Graph{}.png".format(datetime.now().strftime("%Y%m%d_%H%M%S"))   #save graph
 config.show_solution_score = False
 config.visualise_individual_results = False
 config.visualise_overall_agent_results = True
