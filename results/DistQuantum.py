@@ -24,7 +24,7 @@ import torch
 config = Config()
 
 config.seed = 123453
-config.num_episodes_to_run = 250   # control number of episodes was 60
+config.num_episodes_to_run = 1#250   # control number of episodes was 60
 config.file_to_save_data_results = "results/data_and_graphs/dist_quantum_Results_Data.pkl"   #save results 
 config.file_to_save_results_graph = "results/data_and_graphs/dist_quantum__Results_Graph.png"   #save graph
 config.show_solution_score = False
@@ -33,7 +33,7 @@ config.visualise_overall_agent_results = True
 config.baselines = True
 config.standard_deviation_results = 1.0
 config.runs_per_agent = 1
-config.use_GPU = True
+config.use_GPU = False#True
 config.overwrite_existing_results_file = False
 config.randomise_random_seed = True
 config.save_model = True
