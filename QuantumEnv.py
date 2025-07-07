@@ -8,7 +8,7 @@ import random
 
 from Constants import Constants
 
-#random.seed()  #choose your lucky number here and fix seed
+random.seed(123453)  #choose your lucky number here and fix seed
 
 #from QuatumEnvironment_dummy import QuantumEvnironment     #import the distributed quantum computing simulation environment
 from QuatumEnvironment import QuantumEvnironment     #import the distributed quantum computing simulation environment
@@ -56,12 +56,12 @@ class EnvUpdater(gym.Env):      #gym is an opanAI's environment generator tools.
         self.successfulGames = 0
         
         self.epiTotalREward = 0
-        self.reward_filename = 'rewards{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
+        self.reward_filename = 'results/data_and_graphs/rewards{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
         with open(self.reward_filename, 'a', newline="") as file:
             writer = csv.writer(file)
             #writer.writerow(["Episode","Total"])
 
-        self.done_filename = 'doneTime{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
+        self.done_filename = 'results/data_and_graphs/doneTime{}.csv'.format(datetime.now().strftime("%Y%m%d_%H%M%S"))
         with open(self.reward_filename, 'a', newline="") as file2:
             writer2 = csv.writer(file2)
             #writer.writerow(["Episode","Total"])

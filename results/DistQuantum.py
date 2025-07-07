@@ -25,7 +25,7 @@ import torch
 config = Config()
 
 config.seed = 123453
-config.num_episodes_to_run = 150   # control number of episodes was 60
+config.num_episodes_to_run = 1   # control number of episodes was 60
 config.file_to_save_data_results = "results/data_and_graphs/dist_quantum_Results_Data{}.pkl".format(datetime.now().strftime("%Y%m%d_%H%M%S"))   #save results 
 config.file_to_save_results_graph = "results/data_and_graphs/dist_quantum__Results_Graph{}.png".format(datetime.now().strftime("%Y%m%d_%H%M%S"))   #save graph
 config.show_solution_score = False
@@ -51,7 +51,7 @@ config.hyperparameters = {
         "batch_size": 256*10, #256*10,
         "buffer_size": 100000, #was 80000
         "epsilon": 1.0,
-        "epsilon_decay_rate_denominator": 80, #was 50 
+        "epsilon_decay_rate_denominator": 50, #was #80, #was 50
         "discount_rate": 0.99,  #0.99,
         "tau": 0.001,
         "update_every_n_steps": 5,
